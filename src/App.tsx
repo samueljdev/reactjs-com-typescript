@@ -1,30 +1,18 @@
 import './App.css'
+import { Aluno } from './components/aluno'
+import { Footer } from './components/footer'
+import { Header } from './components/header'
 
 function App() {
 
   return (
     <>
-      <h1>Primeiro componente</h1>
-      <Aluno nome='Samuel' idade={34} /> {/* inovando componente aluno e passando propriedades */}
-      <Aluno nome='Lucia' idade={34} />  {/* reaproveitando componente */}
-      <Aluno nome='Karine' idade={34} /> {/* reaproveitando componente */}
+      <Header />
+      <Aluno nome='Samuel' idade={34} />
+      <Aluno nome='Lucia' idade={34} />
+      <Aluno nome='Karine' idade={34} />
+      <Footer />
     </>
-  )
-}
-
-// tipando componente aluno atraves da interface
-interface AlunoProps {
-  nome: string;
-  idade: number;
-}
-
-// criando componente aluno, que espera receber duas propriedades
-function Aluno({ nome, idade }: AlunoProps) {
-  return (
-    <div>
-      <h1>Aluno: {nome}</h1>
-      <h3>Idade: {idade}</h3>
-    </div>
   )
 }
 
